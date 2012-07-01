@@ -1,0 +1,14 @@
+
+p {
+    margin:5px;
+}
+.settings {
+
+    background-image:url(../../../resources/themes/images/default/icon/folder_wrench.png);
+}
+.nav {
+    background-image:url(../../../resources/themes/images/default/icon/folder_wrench.png);
+}
+.info {
+    background-image:url(../../../resources/themes/images/default/icon/folder_wrench.png);
+}
