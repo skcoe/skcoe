@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:sec="http://www.springframework.org/schema/security"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+	<!-- ========================= DAO DEFINITIONS ========================= -->
+	<bean id="sffPrepaidProjectDao" class="th.co.ais.sff.dao.hibernate.am.HibernateSffPrepaidProjectDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="profileChangeFutureRequestService" class="th.co.ais.sff.service.impl.am.ProfileChangeFutureRequestServiceImpl"  autowire="byName" />
+	<bean id="profileChangeBatchInboundServices" class="th.co.ais.sff.service.impl.am.ProfileChangeBatchInboundServicesImpl" autowire="byName" />
+	<bean id="amWSCallerService" class="th.co.ais.sff.service.ws.impl.am.AMWSCallerServiceImpl"	autowire="byName" />
+	<bean id="promotionCreationServices" class="th.co.ais.sff.service.impl.am.PromotionCreationServicesImpl" autowire="byName" />
+	<bean id="fraudAlertInboundService" class="th.co.ais.sff.service.impl.am.FraudAlertInboundServiceImpl" autowire="byName" />
+	<bean id="moiChangeService" class="th.co.ais.sff.service.impl.am.MoiChangeServiceImpl" autowire="byName" />
+	<bean id="identificationInfoSearchService" class="th.co.ais.sff.service.impl.am.IdentificationInfoSearchServiceImpl" autowire="byName" />
+	<bean id="newRegisterDealerService" class="th.co.ais.sff.service.impl.am.NewRegisterDealerServiceImpl" autowire="byName" />
+	<bean id="accountMOIService" class="th.co.ais.sff.service.impl.am.AccountMOIServiceImpl" autowire="byName"/>
+	<bean id="profileChangeReInterfaceService" class="th.co.ais.sff.service.impl.am.ProfileChangeReInterfaceServiceImpl" autowire="byName"/>
+	<bean id="blacklistStatusChangeService" class="th.co.ais.sff.service.impl.am.BlacklistStatusChangeServiceImpl" autowire="byName" />
+	<bean id="zipcodeChangeService" class="th.co.ais.sff.service.impl.am.ZipcodeChangeServiceImpl" autowire="byName" />
+	<bean id="zipcodeService" class="th.co.ais.sff.service.impl.am.ZipcodeServiceImpl" autowire="byName" />
+	<bean id="siebelValidationService" class="th.co.ais.sff.service.impl.am.SiebelValidationServiceImpl" autowire="byName" />
+	<bean id="internalNumberPortService" class="th.co.ais.sff.service.impl.am.InternalNumberPortServiceImpl" autowire="byName" />
+	<bean id="childZIPCodeChangeService" class="th.co.ais.sff.service.impl.am.ChildZIPCodeChangeServiceImpl" autowire="byName" />
+	<bean id="newRegisterDealerBusGovService" class="th.co.ais.sff.service.impl.am.NewRegisterDealerBusGovServiceImpl" autowire="byName" />
+	<bean id="accountBatchNewRegistrationService" class="th.co.ais.sff.service.impl.am.AccountBatchNewRegistrationServiceImpl" autowire="byName" />
+	<bean id="addressChangeMenuService" class="th.co.ais.sff.service.impl.am.AddressChangeMenuServiceImpl" autowire="byName" />
+	</beans>
