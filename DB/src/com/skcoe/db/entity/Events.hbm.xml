@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 12, 2012 3:31:57 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Events" table="events" catalog="adm">
+        <id name="eventId" type="long">
+            <column name="EVENT_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="eventDate" type="timestamp">
+            <column name="EVENT_DATE" length="19" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" />
+        </property>
+    </class>
+</hibernate-mapping>
