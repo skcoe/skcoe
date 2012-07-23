@@ -1,0 +1,5 @@
+#surefire
+#Mon Jul 23 16:18:24 ICT 2012
+user.dir=D\:\\ProjectTest\\Hibernate\\HibernateExample
+localRepository=D\:\\Lib\\LibMavenRepo
+basedir=D\:\\ProjectTest\\Hibernate\\HibernateExample
