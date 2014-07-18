@@ -1,0 +1,1 @@
+var xx000 =function(){alert("xs");};
