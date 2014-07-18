@@ -1,0 +1,54 @@
+.listTree {
+    margin-bottom: 18px;
+}
+.listTree ul {
+    margin: 0;
+}
+.listTree li {
+    list-style-type: none;
+}
+.listTree > ul > li {
+    background-color: #EEEEEE;
+    border-color: #DDDDDD;
+    border-style: solid;
+    border-width: 1px 1px 0;
+}
+.listTree > ul > li:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-width: 1px 1px 0;
+}
+.listTree > ul > li:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-width: 1px;
+}
+.listTree > ul > li:last-child > ul > li:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.listTree span {
+    display: inline-block;
+    padding: 5px;
+    width: 100%;
+}
+.listTree > ul > li > span {
+    font-weight: bold;
+}
+.listTree > ul > li > ul > li {
+    background-color: #FFFFFF;
+    border-color: #DDDDDD;
+    border-style: solid;
+    border-width: 1px 0 0;
+    padding-left: 10px;
+}
+.listTree > ul > li > ul > li:first-child {
+    border-width: 1px 0 0;
+}
+.listTree > ul > li > ul > li:last-child {
+    border-width: 1px 0 0;
+}
+.listTree i {
+    float: right;
+    margin-right: 15px;
+}
