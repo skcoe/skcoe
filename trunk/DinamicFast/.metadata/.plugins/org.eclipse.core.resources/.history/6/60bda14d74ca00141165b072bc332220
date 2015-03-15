@@ -1,0 +1,41 @@
+#rootPath=D:\\log
+#stepPath=\\
+
+rootPath=/data/applog/COMCDV/auth
+stepPath=/
+
+datestamp=yyyy-MM-dd/HH:mm:ss.SSS/zzz
+roll.pattern.hourly=.yyyy-MM-dd.HH
+roll.pattern.daily=.yyyy-MM-dd
+
+
+# Direct log messages to a log file
+log4j.appender.trueerr=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.trueerr.DatePattern=${roll.pattern.hourly}
+log4j.appender.trueerr.File=${rootPath}${stepPath}err.log
+log4j.appender.trueerr.layout=org.apache.log4j.PatternLayout
+log4j.appender.trueerr.layout.ConversionPattern=%d{${datestamp}} %5p - %m  %c{1}:%L%n
+log4j.appender.trueerr.Threshold=ERROR
+
+# Direct log messages to a log file
+log4j.appender.truedebug=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.truedebug.DatePattern=${roll.pattern.hourly}
+log4j.appender.truedebug.File= ${rootPath}${stepPath}debug.log
+log4j.appender.truedebug.layout=org.apache.log4j.PatternLayout
+log4j.appender.truedebug.Encoding=UTF-8
+log4j.appender.truedebug.layout.ConversionPattern=%d{${datestamp}} %5p - %m  %c{1}:%L %n
+log4j.appender.truedebug.Threshold=DEBUG
+ 
+# Direct log messages to stdout
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Target=System.out
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{${datestamp}} %5p %m  %c{1}:%L%n
+ 
+# Root logger option
+#log4j.rootLogger=DEBUG ,truedebug, trueerr, stdout
+log4j.rootLogger=DEBUG ,truedebug, trueerr
+ 
+
+
+#ALL<DEBUG<INFO<WARN<ERROR<FATAL<OFF 

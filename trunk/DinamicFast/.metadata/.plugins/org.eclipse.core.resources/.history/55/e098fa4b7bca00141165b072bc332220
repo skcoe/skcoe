@@ -1,0 +1,501 @@
+<Configuration>
+	
+	<ServletMapping>		
+		<Servlet path="LOVChildrenJSONServlet" class="th.co.truecorp.com.service.lov.LOVChildrenJSONServlet" />
+		<Servlet path="LOVNoneLeafLazyBindingJSONServlet" class="th.co.truecorp.com.service.lov.LOVNoneLeafLazyBindingJSONServlet" />
+		<Servlet path="adsl-coverage-service" class="th.co.truecorp.vcare.vcaregateway.servlet.adslservice.ADSLCheckCoverageServlet" />
+		<Servlet path="axis" class="org.apache.axis.transport.http.AxisServlet" />
+
+		<Servlet path="axis2" class="org.apache.axis2.transport.http.AxisServlet" startup="20"/>
+		<Servlet path="AppConfigWebServiceInterface" class="th.co.truecorp.vcare.http.servlet.DelegateHttpServlet">		
+			<InitParam>				
+				<Param name="services.path" value="/axis/AppConfigWebServiceInterface"/>			
+			</InitParam>		
+		</Servlet>
+		
+		<Servlet path="COMManager" class="org.apache.axis.transport.http.AxisServlet">			
+			<InitParam>
+				<Param name="services.path" value="/axis/COMManager"/>			
+			</InitParam>		
+		</Servlet>
+		
+		<Servlet path="ADSLOrderService" class="org.apache.axis.transport.http.AxisServlet">			
+			<InitParam>				
+				<Param name="services.path" value="/axis/ADSLOrderService"/>	
+			</InitParam>		
+		</Servlet>
+		
+		<Servlet path="COMService" class="org.apache.axis.transport.http.AxisServlet">			
+			<InitParam>				
+				<Param name="services.path" value="/axis/COMService"/>			
+			</InitParam>		
+		</Servlet>
+		
+		<Servlet path="ATB2Service" class="org.apache.axis.transport.http.AxisServlet">			
+			<InitParam>				
+				<Param name="services.path" value="/axis/ATB2Service"/>			
+			</InitParam>		
+		</Servlet>
+ 		
+		<Servlet path="LOVService" class="org.apache.axis.transport.http.AxisServlet">			
+			<InitParam>				
+				<Param name="services.path" value="/axis/LOVService"/>			
+			</InitParam>		
+		</Servlet>
+		
+		<Servlet path="ValidateService" class="org.apache.axis.transport.http.AxisServlet">			
+			<InitParam>				
+				<Param name="services.path" value="/axis/ValidateService"/>		
+			</InitParam>		
+		</Servlet>
+		
+		<Servlet path="UserDivision" class="org.apache.axis.transport.http.AxisServlet">			
+			<InitParam>				
+				<Param name="services.path" value="/axis/UserDivision"/>			
+			</InitParam>	
+		</Servlet>
+		
+		<Servlet path="COMCancelHispeedService" class="org.apache.axis.transport.http.AxisServlet">			
+			<InitParam>				
+				<Param name="services.path" value="/axis/COMCancelHispeedService"/>			
+			</InitParam>		
+		</Servlet>
+		
+		<Servlet path="COMCancelService" class="org.apache.axis.transport.http.AxisServlet">			
+			<InitParam>				
+				<Param name="services.path" value="/axis/COMCancelService"/>	
+			</InitParam>		
+		</Servlet>
+        <Servlet path="ABCReservService" class="th.co.truecorp.vcare.http.servlet.ABCReservService"/>	
+        <Servlet path="ABCConfirmESPG" class="th.co.truecorp.vcare.vcaregateway.servlet.abcConfirmESPG.ABCConfirmESPG"/>
+		<Servlet path="SiebelServiceAPI" class="th.co.siebel.api.SiebelServiceAPI" />
+		<Servlet path="TrueOnlineAPI" class="th.co.trueonline.api.TrueOnlineAPI" />
+		<Servlet path="INOrderActivityServiceAPI" class="th.co.truecorp.vcare.vcaregateway.servlet.inorderactivityservice.INOrderActivityServiceAPI" />
+		<Servlet path="CCSSAppointmentDateAPI" class="th.co.truecorp.vcare.vcaregateway.servlet.ccssappointmentdate.CCSSAppointmentDateAPI" />
+		<Servlet path="TrueMailPlusServiceAPI" class="th.co.truecorp.vcare.vcaregateway.servlet.truemailplus.TrueMailPlusAPI" />
+		<Servlet path="QueryBillCycleInfo" class="th.co.truecorp.vcare.amdocs.httpservlet.BillCycleInfoServlet" />
+		<Servlet path="QueryBANInfo" class="th.co.truecorp.vcare.amdocs.httpservlet.BANInfoServlet" />
+		<Servlet path="CreditLimitService" class="th.co.truecorp.vcare.vcaregateway.servlet.creditlimit.CreditLimitServlet" />
+		<Servlet path="CreditLimitServiceWS" class="org.apache.axis.transport.http.AxisServlet" />
+		<Servlet path="QueryBillingProfile.asp" class="th.co.truecorp.vcare.amdocs.httpservlet.BillingProfileServlet" />
+		<Servlet path="GetBillCycleBANRootServlet" class="th.co.truecorp.vcare.amdocs.httpservlet.GetBillCycleBANRootServlet" />
+		<Servlet path="QueryPaymentInfo" class="th.co.truecorp.vcare.amdocs.httpservlet.GetPaymentDetailsServlet" />
+		<Servlet path="ATestServlet" class="th.co.truecorp.vcare.siebel.bn.pullingtimer.ATestServlet" />
+		<Servlet path="test" class="th.co.truecorp.vcare.vcaregateway.servlet.jasper.JspServlet" />
+		<Servlet path="ValidatePricePlanServlet" class="th.co.truecorp.vcare.validationpp.ValidatePricePlanServlet" />
+		<Servlet path="changedomain" class="th.co.truecorp.vcare.vcaregateway.servlet.changedomain.Changedomain" />
+		<Servlet path="UpdateConvCodetoCCBS" class="th.co.truecorp.vcare.vcaregateway.servlet.addSocWstoCCBS.AddSocWstoCCBS" />
+		<Servlet path="validatevasforrecontractorder" class="th.co.truecorp.vcare.vcaregateway.servlet.validatevasforrecontractorder.ValidateVasForRecontractOrder" />
+		<Servlet path="NotifyChangeTelToTrenMicro" class="th.co.truecorp.vcare.vcaregateway.servlet.notifychangeteltotrenmicro.NotifyChangeTelToTrenMicro" />
+		<Servlet path="suspensionpackservlet" class="th.co.truecorp.vcare.vcaregateway.servlet.suspensionpackservlet.Suspensionpackservlet" />
+		<Servlet path="ADSLWaitingTAPSClosedTask" class="th.co.truecorp.vcare.vcaregateway.servlet.adslwaitingtapsclosedtask.ADSLWaitingTAPSClosedTask" />
+		<Servlet path="CallAddSOC" class="th.co.truecorp.vcare.vcaregateway.servlet.CallAddSOC" />
+		<Servlet path="ATB5WaitingATPClosedTask" class="th.co.truecorp.vcare.vcaregateway.servlet.atb5watingclosedtask.ATB5WaitingClosedTask" />
+		<Servlet path="LanSwitchWaitingTAPSClosedTask" class="th.co.truecorp.vcare.vcaregateway.servlet.lanswitchwaitingtapsclosedtask.LanSwitchWaitingTAPSClosedTask" />
+		<Servlet path="validaterecontractfixline" class="th.co.truecorp.vcare.vcaregateway.servlet.validaterecontractfixline.Validaterecontractfixline" />
+		<Servlet path="checkdocsisforchangepackage" class="th.co.truecorp.vcare.vcaregateway.servlet.checkdocsisforchangepackage.Checkdocsisforchangepackage" />
+        <Servlet path="CheckLowCostPackage" class="th.co.truecorp.vcare.vcaregateway.servlet.checklowcostpackage.CheckLowCostPackage" />
+		<Servlet path="LanSwitchGetInfo" class="th.co.truecorp.vcare.vcaregateway.servlet.LanSwitchGetInfo.LanSwitchGetInfo" />
+		<!--### ModemUpdateInfoRequest ###-->
+		<Servlet path="ModemUpdateInfoRequest" class="th.co.truecorp.vcare.modemupdateinfo.ModemUpdateInfoRequest" />
+		<Servlet path="TIGInvoke" class="tigservlet.TIGServletService" />
+		<Servlet path="uplocalspeedservice" class="th.co.truecorp.vcare.vcaregateway.servlet.uplocalspeedservice.UplocalSpeedService" />
+		<Servlet path="tucvoiceservice" class="th.co.truecorp.vcare.vcaregateway.servlet.tucvoiceservice.TUCVoiceService" />
+		<Servlet path="getinterspeedservice" class="th.co.truecorp.vcare.vcaregateway.servlet.uplocalspeedservice.GetInterSpeedService" />
+		<Servlet path="MetasolvProvisioningService" class="th.co.truecorp.vcare.metasolv.provisioning.service.MetasolvProvisioningService" />
+		<Servlet path="CIAWebService" class="org.apache.axis.transport.http.AxisServlet" />
+		<Servlet path="VerifyATB5ChangeTelService" class="th.co.truecorp.vcare.atb5.service.VerifyATB5ChangeTelService" />
+		<Servlet path="CIAService" class="th.co.truecorp.vcare.vcaregateway.servlet.ciaservice.CIAServiceServlet" />
+		<Servlet path="PosCountOrderByAssetNumService" class="th.co.truecorp.vcare.vcaregateway.servlet.pos.PosCountOrderByAssetNumService" />
+		<Servlet path="PosGetOrderInfo1ByAssetNumService" class="th.co.truecorp.vcare.vcaregateway.servlet.pos.PosGetOrderInfo1ByAssetNumService" />
+		<Servlet path="PosGetOrderInfo2ByAssetNumService" class="th.co.truecorp.vcare.vcaregateway.servlet.pos.PosGetOrderInfo2ByAssetNumService" />
+		<Servlet path="PosUpdateOneTimeFlgService" class="th.co.truecorp.vcare.vcaregateway.servlet.pos.PosUpdateOneTimeFlgService" />
+		<Servlet path="PosGetBanCompanyOwnerService" class="th.co.truecorp.vcare.vcaregateway.servlet.pos.PosGetBanCompanyOwnerService" />
+		<Servlet path="PosGetBillingNameByBanService" class="th.co.truecorp.vcare.vcaregateway.servlet.pos.PosGetBillingNameByBanService" />
+		<Servlet path="PosCountNameAddrByAssetNumService" class="th.co.truecorp.vcare.vcaregateway.servlet.pos.PosCountNameAddrByAssetNumService" />
+		<Servlet path="PosGetDistNameAddrByAssetNumService" class="th.co.truecorp.vcare.vcaregateway.servlet.pos.PosGetDistNameAddrByAssetNumService" />
+		<Servlet path="PosGetNameAddrByAssetNumService" class="th.co.truecorp.vcare.vcaregateway.servlet.pos.PosGetNameAddrByAssetNumService" />
+		<Servlet path="PosGetParentBanConsoByBanService" class="th.co.truecorp.vcare.vcaregateway.servlet.pos.PosGetParentBanConsoByBanService" />
+		<Servlet path="PosGetAccountInfoByRowIdService" class="th.co.truecorp.vcare.vcaregateway.servlet.pos.PosGetAccountInfoByRowIdService" />
+		<Servlet path="ValidateProductConflictService" class="th.co.truecorp.vcare.vcaregateway.servlet.vcareservice.ValidateConflictService" />
+		<Servlet path="NotifyCloseTUCService" class="th.co.truecorp.vcare.vcaregateway.servlet.ciaservice.NotifyCIAtoCloseServlet" />
+		<Servlet path="TUCService" class="th.co.truecorp.vcare.vcaregateway.servlet.ciaservice.TUCServiceServlet" />
+		<Servlet path="webordertranservice" class="th.co.truecorp.vcare.vcaregateway.servlet.webordertranservice.WebOrderTranService" />
+		<Servlet path="cutstockservice" class="th.co.truecorp.vcare.vcaregateway.servlet.cutstockservice.CutStockService" />
+		<Servlet path="HiSpeedAPI" class="th.co.truecorp.hispeed.api.HiSpeedAPI" />
+		<Servlet path="ciaipdidservice" class="th.co.truecorp.vcare.inf.cia.IPDIDInterface" />
+		<Servlet path="GetOrdInfoByAssetNumService" class="th.co.truecorp.vcare.vcaregateway.servlet.siebelservice.GetOrdInfoByAssetNumService" />
+		<Servlet path="UpdRelatedAssetNumForW4Service" class="th.co.truecorp.vcare.vcaregateway.servlet.w4service.UpdRelatedAssetNumForW4Service" />
+		<Servlet path="UpdEndDateElementForW4Service" class="th.co.truecorp.vcare.vcaregateway.servlet.w4service.UpdEndDateItemForW4Service" />
+		<Servlet path="ValidatePendingOrder" class="th.co.truecorp.vcare.service.server.validate.ValidatePendingOrderServlet" />
+		<Servlet path="IPFixlineCIAService" class="th.co.truecorp.vcare.vcaregateway.servlet.ipfixlineciaservice.IPFixlineCIAService" />
+		<Servlet path="VOnlineOrderService" class="th.co.truecorp.vcare.vcaregateway.servlet.vonlineorderservice.VOnlineOrderService" />		
+		<Servlet path="LoadDiscount" class="th.co.truecorp.vcare.vcaregateway.servlet.loadDiscount.LoadDiscount" />
+		<Servlet path="UpdateDiscount" class="th.co.truecorp.vcare.vcaregateway.servlet.updateDiscount.UpdateDiscount" />		
+	    <Servlet path="TrueOnlineService" class="org.apache.axis.transport.http.AxisServlet">	
+		<Servlet path="validateMobileService" class="truecorp.co.th.service.validateMobileService"/>
+		<Servlet path="NetOminaAPI" class="th.co.trueonline.onmina.api.NetOminaAPI" />
+			<InitParam>				
+				<Param name="services.path" value="/axis/TrueOnlineService"/>	
+			</InitParam>		
+		</Servlet>
+		<!--Servlet path="TrueOnlineService" class="org.apache.axis.transport.http.AxisServlet" /--> 
+		<Servlet path="ATB3FineManager" class="org.apache.axis.transport.http.AxisServlet">				
+			<InitParam>				
+				<Param name="services.path" value="/axis/ATB3FineManager"/>	
+			</InitParam>		
+		</Servlet>
+		<Servlet path="ValidateHispeedInternet" class="org.apache.axis.transport.http.AxisServlet">			
+			<InitParam>				
+				<Param name="services.path" value="/axis/ValidateHispeedInternet"/>	
+			</InitParam>		
+		</Servlet>
+
+		
+		<Servlet path="SapEAIServlets" class="th.co.truecorp.vcare.sap.SapEAIServlet" />
+		<Servlet path="ForceCompleteESPGService" class="th.co.truecorp.vcare.vcaregateway.forcecomplete.servlet.ForceCompleteESPGServlet" />
+		
+		<Servlet path="SearchSubcontractor"  class="th.co.truecorp.vcare.vcaregateway.servlet.searchSubcontractor.SearchSubcontractor" />
+		<Servlet path="ivrweb/searchSubcontractor" class="th.co.truecorp.vcare.vcaregateway.servlet.ivrweb.searchSubcontractor" />
+		<Servlet path="AddDiscountPeriodService" class="th.co.truecorp.vcare.vcaregateway.servlet.AddDiscountPeriodService.AddDiscountPeriodService" />
+		<Servlet path="PatchCancelOrderService" class="th.co.truecorp.vcare.vcaregateway.servlet.PatchCancelOrderService.PatchCancelOrder" />
+		<Servlet path="INWebService" class="th.co.truecorp.vcare.vcaregateway.servlet.inweb.INWebService" />
+		<Servlet path="BSPoolWrapperInterface" class="org.apache.axis.transport.http.AxisServlet">			
+			<InitParam>
+				<Param name="services.path" value="/axis/BSPoolWrapperInterface"/>			
+			</InitParam>		
+		</Servlet>
+		<Servlet path="CallCIAFreePhone" class="th.co.truecorp.vcare.cia.call.servlet.CallCIAFreephone" />
+	</ServletMapping>
+	
+	<Logger defaultpath="/data/applog/COMCDV/vcare-gateway">
+		<Log name="th.co.truecorp.spg.servlet.webservice.SPGWebServiceBean" filename="SPGWebServiceBean" level="4" encoding="UTF-8" />
+		<Log name="th.co.truecorp.spg.servlet.http.XmlOverHttpServlet" filename="XmlOverHttpServlet" level="2" encoding="UTF-8" />
+		<Log name="OrderService" filename="OrderService" level="2" encoding="UTF-8" />
+		<Log name="adslserviceorder" filename="adslserviceorder" level="4" />
+		<Log name="COMService" filename="COMService" level="4" />
+		<Log name="COMManager" filename="commanager" level="4" encoding="UTF-8" /> 
+		<Log name="sapeai" filename="sapeai" level="4" encoding="UTF-8" />
+		<Log name="COMLOVService" filename="com_lov_service" level="4" />
+		<Log name="creditLimitService" filename="CreditLimitlog" level="4" />
+		<Log name="ATB2" filename="ATB2" level="4" encoding="UTF-8" /> 
+		<Log name="validateservice" filename="validateservice" level="4" />
+		<Log name="UserDivisionService" filename="UserDivisionService" level="4" />
+		<Log name="adslservice" filename="adslservice" level="4" />
+		<Log name="CancelHispeedService" filename="CancelHispeedService" level="4" encoding="UTF-8" />
+		<Log name="COMCancelService" filename="COMCancelService" level="4" encoding="UTF-8" />
+		<Log name="ApplicationContext"  filename="vcaregateway" level="4" /> 				
+		<Log name="DispatcherHttpServet"  filename="vcaregateway" level="4" />
+		<Log name="BANInfoServlet"  filename="BANInfoServlet" level="4" />
+	    <Log name="changedomain" filename="changedomain" level="4" />
+		<Log name="UpdateConvCodetoCCBS" filename="UpdateConvCodetoCCBS" level="4" />
+		<Log name="validatevasforrecontractorder" filename="validatevasforrecontractorder" level="4" />
+		<Log name="NotifyChangeTelToTrenMicro" filename="NotifyChangeTelToTrenMicro" level="4" />
+		<Log name="suspensionpackservlet" filename="suspensionpackservlet" level="4" />
+		<Log name="VerifyATB5ChangeTelService" filename="VerifyATB5ChangeTelService" level="4" />
+		<Log name="ADSLWaitingTAPSClosedTask" filename="ADSLWaitingTAPSClosedTask" level="4" />
+		<Log name="CallAddSOC" filename="CallAddSOC" level="4" />
+		<Log name="ATB5WaitingATPClosedTask" filename="ATB5WaitingATPClosedTask" level="4" />
+		<Log name="LanSwitchWaitingTAPSClosedTask" filename="LanSwitchWaitingTAPSClosedTask" level="4" />
+		<Log name="validaterecontractfixline" filename="validaterecontractfixline" level="4" />
+		<Log name="checkdocsisforchangepackage" filename="checkdocsisforchangepackage" level="4" />
+		<Log name="CheckLowCostPackage" filename="CheckLowCostPackage" level="4" />
+		<Log name="LanSwitchGetInfo" filename="LanSwitchGetInfo" level="4" />
+		<Log name="DataValidationService" filename="DataValidationService" level="4" encoding="UTF-8" /> 
+		<Log name="PullingDataTimerContextListener" filename="PullingDataTimerContextListener" level="4" encoding="UTF-8" />
+		<Log name="ATestServlet" filename="ATestServlet" level="4" encoding="UTF-8" />
+		<Log name="SAPUpdateInfoService" filename="SAPUpdateInfoService" level="4" encoding="UTF-8"/>
+		<Log name="ModemUpdateInfoRequest" filename="SAPUpdateInfoRequest" level="4" encoding="UTF-8"/>
+		<Log name="ValidatePricePlanServlet" filename="ValidatePricePlanLog" level="4" encoding="UTF-8"/>
+		<Log name="tigvcareinterface" filename="tigvcareinterface" level="4" encoding="UTF-8"/>
+		<Log name="uplocalspeedservice" filename="uplocalspeedservice" level="4" />
+		<Log name="tucvoiceservice" filename="tucvoiceservice" level="4" />
+		<Log name="webordertranservice" filename="webordertranservice" level="4" />
+		<Log name="cutstockservice" filename="cutstockservice" level="4" />
+		<Log name="MetasolvProvisioningService" filename="MetasolvProvisioningService" level="4" encoding="UTF-8" />
+		<Log name="TrueOnlineAPI" filename="TrueOnlineAPI" level="4" encoding="UTF-8" />
+		<Log name="INOrderActivityServiceAPI" filename="INOrderActivityServiceAPI" level="4" encoding="UTF-8" />
+		<Log name="CCSSAppointmentDateAPI" filename="CCSSAppointmentDateAPI" level="4" encoding="UTF-8" />
+		<Log name="TrueMailPlusAPI" filename="TrueMailPlusAPI" level="4" encoding="UTF-8" />
+		<Log name="ciaservice" filename="ciaservice" level="4" />
+		<Log name="ciaserviceservlet" filename="ciaserviceservlet" level="4" />		
+		<Log name="posservice" filename="posservice" level="4" />
+		<Log name="vcareservice" filename="vcareservice" level="4" />
+		<Log name="tucserviceservlet" filename="tucserviceservlet" level="4" />
+		<Log name="HiSpeedAPI" filename="HiSpeedAPI" level="4" />
+		<Log name="ipdidinterface" filename="IPDIDInterface" level="4" />
+		<Log name="siebelservice" filename="siebelservice" level="4" />
+		<Log name="w4service" filename="w4service" level="4" />
+		<Log name="validateservice" filename="validateservice" level="4" />		
+		<Log name="ManageStateUtil" filename="ManageStateUtil" level="4" />		
+		<Log name="TUCService" filename="TUCService" level="4" />		
+		<Log name="CLLIService" filename="CLLIService" level="4" />
+		<Log name="IPFixlineCIAService" filename="IPFixlineCIAService" level="4" />
+		<Log name="ValidateHispeedInternet" filename="ValidateHispeedInternet" level="4" />
+		<Log name="SiebelServiceAPI" filename="SiebelServiceAPI" level="4" encoding="UTF-8"/>
+		<Log name="VOnlineOrderService" filename="VOnlineOrderService" level="4" />
+	    <Log name="ValidateMobileService" filename="ValidateMobileService" level="4" encoding="UTF-8" />
+		<Log name="LoadDiscount" filename="LoadDiscount" level="4" encoding="UTF-8"/>
+		<Log name="UpdateDiscount" filename="UpdateDiscount" level="4" encoding="UTF-8"/>
+		<Log name="ForceCompleteESPGService" filename="ForceCompleteESPGService" level="4" encoding="UTF-8"/>
+		<Log name="ivrweb" filename="ivrweb" level="4" encoding="UTF-8" />
+		<Log name="ABCReservService" filename="ABCReservService" level="4" encoding="UTF-8" />
+		<Log name="ABCConfirmESPG" filename="ABCConfirmESPG" level="4" encoding="UTF-8" />	
+		<Log name="AddDiscountPeriodService" filename="AddDiscountPeriodService" level="4" encoding="UTF-8" />
+		<Log name="inwebservice" filename="inwebservice" level="4" />
+		<Log name="bspoolwrapper" filename="bspoolwrapper" level="4" encoding="UTF-8"/>
+  <Log name="DiscountCriteriaImp" filename="discountCriteriaImp" level="4" encoding="UTF-8" /> 
+  <Log name="AddOrDeleteSOC" filename="AddOrDeleteSOC" level="4" encoding="UTF-8" /> 
+  <Log name="WMAService" filename="WMAService" level="4" encoding="UTF-8" /> 
+  <Log name="DeliveryModemImp" filename="deliveryModemImp" level="4" encoding="UTF-8" /> 
+  <Log name="DiscountPlanImp" filename="discountPlanImp" level="4" encoding="UTF-8" /> 
+  <Log name="DisconnectInfo" filename="disconnectInfo" level="4" encoding="UTF-8" /> 
+  <Log name="AdjustmentOrderImp" filename="adjustmentOrderImp" level="4" encoding="UTF-8" /> 
+  <Log name="GetPriceImp" filename="getPriceImp" level="4" encoding="UTF-8" /> 
+  <Log name="WaitingTVSStatusImp" filename="waitingTVSStatusImp" level="4" encoding="UTF-8" /> 
+  <Log name="CreateAdjustmentOrderImp" filename="createAdjustmentOrderImp" level="4" encoding="UTF-8" /> 
+  <Log name="ValidateTOLBundleTVSImp" filename="validateTOLBundleTVSImp" level="4" encoding="UTF-8" /> 
+  <Log name="RequestUBITUS" filename="requestUBITUS" level="4" encoding="UTF-8" /> 
+		<Log name="requestExternalProjectCode" filename="requestExternalProjectCode" level="4" encoding="UTF-8" />		
+		<Log name="GetTOLProfileImp" filename="GetTOLProfileImp" level="4" encoding="UTF-8" /> 
+		<Log name="requestOnlineInfoByRequestNum" filename="requestOnlineInfoByRequestNum" level="4" encoding="UTF-8" /> 
+		<Log name="GetProductBundleInfoImp" filename="GetProductBundleInfoImp" level="4" encoding="UTF-8" /> 		
+		<Log name="GetTOLCampaignMapping" filename="GetTOLCampaignMapping" level="4" encoding="UTF-8" /> 		
+		<Log name="GetPromotionByChannelImp" filename="GetPromotionByChannelImp" level="4" encoding="UTF-8" /> 			
+		<Log name="GetTOLPromotionByChannelImp" filename="GetTOLPromotionByChannelImp" level="4" encoding="UTF-8" /> 					
+		<Log name="TOLRequestActivityImp" filename="TOLRequestActivityImp" level="4" encoding="UTF-8" /> 		
+		<Log name="NetOminaAPI" filename="NetOminaAPI" level="4" encoding="UTF-8" />
+		<Log name="CallCIAFreePhone" filename="CallCIAFreePhone" level="4" encoding="UTF-8" />
+		
+		</Logger>
+
+	<Parameter>
+		<Param name="espg.url" value = "http://172.19.195.73:9510/SPGGateway2" />
+		<Param name="spg.url" value = "http://172.19.195.73:9510/SPGGateway2" />
+		<Param name="metasolvgateway.url" value = "http://172.19.195.73:9510/metasolv" />
+		<Param name="ccssservice.url" value = "http://172.19.195.73:9510/CCSSService" />
+		<Param name="httpserver.url" value = "http://172.19.195.73:9510/httpserver" />
+		<Param name="TIGVCareInterface.siebel.url" value = "http://172.19.195.73:9510/BSPoolService" />
+		<Param name="TIGVCareInterface.siebel.user" value = "vcareci" />
+		<Param name="TIGVCareInterface.siebel.password" value = "daddy" />
+		<Param name="BSPoolService.IP" value="http://172.19.195.73:9510/TBSPoolService"/>
+		<Param name="BSPoolService.user" value="vcareci"/>
+		<Param name="BSPoolService.pass" value="daddy"/>
+		<Param name="vcarehttpserver.url" value="http://172.19.195.73:9510/vcarehttpserver" />
+		<Param name="javahttpserver.url" value="http://172.19.195.73:9510/javahttpserver" />
+		<Param name="microbilling.url" value="http://172.19.195.73:9510/MicroBilling" />
+		<!-- COM hispeed service (com-manager-service) -->
+		<Param name="hispeeddeliverydesc.url" value="http://172.19.192.138:18080/HiSpeedEthernetService/HiSpeedService" />
+		<!--#############################-->
+		<!--Param name="sap.url" value="http://172.19.8.27/PRD_ECC4/services/SapCall" /-->
+		<!--<Param name="sap.url" value="http://172.19.8.27/PDA_ECC5/services/sapCall"/>-->
+		<Param name="sap.url" value="http://172.19.194.96:18080/PDA_ECC5/services/sapCall"/>
+		<!--<Param name="sap.url" value="http://172.16.41.146:9002/PDA_ECC5_12062014/services/sapCall"/>-->
+
+		<Param name="sap.checkmaster.url" value="http://172.19.8.27/CHECK_MASTER/services/CheckMaster"/>
+		<Param name="sap.user" value="vcare" />
+		<Param name="sap.password" value="sapsap" />
+		<Param name="sap.cut_stock_server" value="QA320" />
+		<!-- COM hispeed service (com-manager-service) -->
+		<!-- Param name="atb3service.url" value="http://172.19.192.138:9080/ATB3APITAINT/ATB3Service" /-->
+		<!-- Param name="atb3service_hispeed.url" value="http://172.19.192.138:9080/ATB3APITAINT/HiSpeedService" /-->
+		<Param name="atb3.url" value="http://172.20.7.91:8080/ATB3ServletService20/ATB3" />
+		<Param name="adsl_order_service.url" value="http://172.19.195.73:9510/ADSL/ADSLOrderService" />
+		<Param name="webregisterhandler.url" value="http://172.19.195.73:9510/WebRegisterHandler" />
+		<!-- Start COM Cancel Service -->
+		<!-- Param name="com.service.url" value="http://172.19.8.83:9080/com-gateway/services/COMService" /-->
+		<!-- Change URL up to COM gate-way server for use that ENV -->
+		<!-- Param name="espg.service.url" value="http://172.20.7.139:9080/espg-servlets/services/ESPGWebService" /-->
+		<!-- Change URL up to ESPG server for use that ENV -->
+		<Param name="espg.parameter.name" value="ESPGTransactionId" />
+		<!-- End COM Cancel Service -->
+		<!-- Start COM Cancel Hispeed Service -->
+		<Param name="document.service.url" value="http://172.19.8.208:8084/DocumentumWSCancel/services/COMCancelService" />
+		<!-- End COM Cancel Hispeed Service -->
+		<!-- Start BN Pulling Timer -->
+		<Param name="pulling.delay.time" value="900000" /><!-- 15 Minute -->
+		<!-- Param name="bn.webservice.url" value="http://172.19.8.83:9080/com-gateway/services/axis2/BNWebService" /-->
+		<!-- End BN Pulling Timer -->
+		<!--#############################-->
+		<Param name="adsl_ws.url" value="http://172.19.194.96:18080/CIAWS/services/ADSLCoverageService" />
+		<!--Param name="adsl_ws.url" value="http://172.19.194.96:18080/CIAWS/services/ADSLCoverageService" /-->
+		<Param name="microbillinginfo.url" value="http://172.19.195.73:9510/MicroBilling_SITCOM" />
+		<Param name="microbillinginfo.user" value="vcare" />
+		<Param name="microbillinginfo.password" value="iaitt2" />
+		<Param name="microbillinginfo_docsis.url" value="http://172.19.195.73:9510/MicroBilling_SITNonedsl" />
+		<Param name="microbillinginfo.user" value="vcare" />
+		<Param name="microbillinginfo_docsis.password" value="truetest" />
+		<Param name="metasolvservice.user" value="vcare" />
+		<Param name="metasolvservice.password" value="vcareapi" />
+		<Param name="parameterspeed.type" value="TA_MAP_LOCAL_SPEED" />
+		<Param name="ccss_ws.url" value="http://172.19.12.44/CCSSCV031/services" />	
+		<Param name="cia_ws.url" value="http://172.19.194.96:18080/CIAWS/services/CLLIService" />
+		<Param name="tuc_act_ws.url" value="http://172.19.194.96:18080/CIAWS/services/TUCOrderActivityService" />
+		<!--Param name="tuc_act_ws.url" value="http://172.16.41.223/CIAWS/services/TUCOrderActivityService" /-->		
+		<Param name="tuc_inq_ws.url" value="http://172.19.194.96:18080/CIAWS/services/TUCCircuitInquiryService" />
+		<Param name="billing_service.url" value="http://172.19.8.27/BillingServiceV4Env23/services/Billing" />
+		<Param name="SIEBEL_DB_NAME" value="jdbc/SIEBEL02" />
+				
+		<!-- ### ATB6 ###-->
+		<Param name="debundle.service.name" value="" />
+		<Param name="atb6.redirect.url" value="" />	
+        <!-- Param name="disconnect_atp.url" value="http://172.19.8.83:9080/AlltogetherServices/WebRegisterHandler" /-->	
+
+		<!-- ### URL DEV ADD OR DELETE SOC TO CCBS ###-->
+		<!--Param name="add_delete_soc_ccbs.url" value="http://172.19.9.112:8180/AmdocsApiLinkWsAmd14/services/ProdConvBeanWs" /-->	
+		<Param name="add_delete_soc_ccbs.url" value="http://172.19.200.92:8080/AmdocsApiLinkWsESB/http/ProdConvBeanWs" />	
+
+		<!-- Validate HiSpeed -->
+		<Param name="ai.service.url" value="http://172.19.195.73:9510/AI" />
+		<Param name="billing.service.url" value="http://172.19.194.96:18080/VcareCCCBillingInfoServiceV3/services/BillingInfoService" />	
+		<Param name="coverage.service.url" value="http://172.19.192.138:18080/vcare-gateway/services/adsl-coverage-service" />
+		<Param name="cia.service.url" value="http://172.19.194.96:18080/CIAWS/services/CLLIService" />
+		<Param name="ciainterface.ipdid.url" value="http://172.19.194.96:18080/CIAWS/services/TUCVoiceIPDIDOrderActivityService" />
+		<!-- ### END ATB6 ###-->
+		
+		<!-- TVS -->
+		<!--<Param name="ibs.service.url" value="http://172.22.203.46/bbhomepass/bbhomepass.asmx" />-->
+		<Param name="ibs.service.url" value="http://172.19.195.73:9510/IBS_SERVICE_SIT" />
+		<!--<Param name="ibs.service.url" value="http://172.19.195.73:9510/IBS_SERVICE_SIT" />-->
+		<Param name="tvs.service.url" value="http://172.19.195.73:9510/UBCWebATB2" />
+		<!--<Param name="onesystemtvs.service.url" value="http://172.22.202.52/TVS_DocsisOSWCFSIT/DocsisService.svc" />-->
+		<Param name="onesystemtvs.service.url" value="http://172.22.202.52/TVS_DocsisOSWCFUAT/DocsisService.svc" />
+
+		<Param name="clli_inq_ws.url" value="http://172.19.194.96:18080/CIAWS/services/CLLIInquiryService" />
+
+		<!-- ### IPFixlne ### -->
+		<!--Param name="tuc_cia_ws.url" value="http://172.19.8.27/CIAGateway/services/TUCVoiceOrdActivityService" /-->
+		<Param name="tuc_cia_ws.url" value="http://172.19.194.96:18080/CIAWS/services/TUCVoiceOrdActivityService" />
+		<Param name="tuc_cia_ws2.url" value="http://172.20.8.205/CIAWS/services/TUCVoiceOrdActivityService" />
+		<!--Param name="tuc_cia_circuitinq_ws.url" value="http://172.20.8.203:8080/CIAWS/services/TUCCircuitInquiryService" /-->
+		<Param name="tuc_cia_circuitinq_ws.url" value="http://172.19.194.96:18080/CIAWS/services/TUCCircuitInquiryService" />
+		<Param name="tuc_cia_inquiry_ws.url" value="http://172.19.194.96:18080/CIAWS/services/TUCVoiceInquiryService" />
+		<!-- ### IPFixlne ### -->
+		<Param name="bbtv.service.url" value="http://172.19.195.73:9510/BBTVService" />	
+		<Param name="bbtv.newservice.url" value="http://172.19.192.138:18080/VcareOrderServices/servlet/VcareOrderServicesHttpServlet" />	
+		
+		<!-- ### Validate Hispeed Internet ### -->
+		<Param name="product.info.service.url" value="http://172.19.195.73:9510/AI" />
+		<Param name="trueonline.service.url" value="http://172.19.192.138:18080/vcare-gateway/services/TrueOnlineService" />
+		<Param name="trueonlineapi.service.url" value="http://172.19.192.138:18080/vcare-gateway/services/TrueOnlineAPI" />
+		<Param name="in.order.activity.service.url" value="http://172.19.194.96:18080/CIAWS/services/INOrderActivityService" />
+		<Param name="ccss.appointment.service.url" value="http://172.19.194.96:18080/CCSSProfile/services/CCSS_Misc_MODDUE_Service" />
+		<Param name="wma_info_ws.url" value="http://172.19.195.73:9510/WMAService/WMAWS/services/WMAInfo" />
+		<Param name="wma_appointment_ws.url" value="http://172.19.195.73:9510/WMAService/WMAWS/services/WMAAppointment" />
+		
+		<Param name="load_discount.url" value="http://172.19.192.138:18080/vcare-gateway/services/LoadDiscount" />
+		<Param name="update_discount.url" value="http://172.19.192.138:18080/vcare-gateway/services/UpdateDiscount" />
+		<Param name="search_subcontractor.url" value="http://172.19.192.138:18080/vcare-gateway/services/SearchSubcontractor" />
+		<Param name="bbtv.servlet.url" value="http://172.19.192.138:18080/VcareOrderServices/servlet/VcareOrderServicesHttpServlet" />	
+
+		<!--## CFM ##-->
+		<Param name="cfm.service.url" value="http://172.19.12.45:9080/CFMInqService/services/CFM_Inq_PlantLocation_Service" />
+		<Param name="cfm.product.category" value="31" />
+		<!--## ATB3 Docsis ##-->
+		<Param name="espg.url" value="http://172.19.192.136:18080/espg-servlets/xmlservlet" />
+		<!--Param name="tucvoice.service.url" value="http://172.19.8.119:18080/FixedlinePlus/RequestServiceOrder" /-->	
+		<Param name="tucvoice.service.url" value="http://172.19.8.119:18080/FixedlinePlus_MPLS/RequestServiceOrder" />	
+		<!--<Param name="tucvoice.service.url" value="http://172.19.8.83:9080/FixedlinePlus/RequestServiceOrder" />	 -->
+		<!--Param name="tucvoice.service.url" value="http://172.19.8.119:18080/FixedlinePlusTest/RequestServiceOrder" /-->	
+
+		<!--## Ultra Hispeed ##-->
+		<Param name="cmb.checkdocsis.url" value="http://172.19.2.18/VcareGateway/services/checkdocsisforchangepackage" />
+		<Param name="tuc_ddn_inq_ws.url" value="http://172.19.194.96:18080/CIAWS/services/DDNInquiryService" />
+		
+		<!--## TCC ##-->
+		<Param name="tcc.url" value="http://172.19.9.148:18081/tcc-seform/TccSEFormCommonService" />
+		<Param name="tcc.discount.url" value="http://172.19.9.148:8280/SEFormTriplePlayService/services/TriplePlayService" />
+		<!--Param name="tmv.ccbs.url" value="http://172.19.136.56/TrueMoveCustInfoESB/http/TrueMoveCustInfo/service" /-->
+		<Param name="tmv.ccbs.url" value="http://172.19.195.73:9510/ShareBundleService14" />		
+
+		<!--## BULK ##-->
+		<Param name="Bulk.HiSpeedServiceRequest.url" value="http://172.19.192.138:18080/HiSpeedEthernetServiceTAINT/HiSpeedServiceRequest" />
+		<Param name="Bulk.HiSpeedService.url" value="http://172.19.192.138:18080/HiSpeedEthernetServiceTAINT/HiSpeedService" />
+		<Param name="ubitus.url" value="https://truemaxxgateway.dev.truelife.com/TrueMaxxGateway/cancelTrueMaxxRCVASOnTIBill" />
+		<!--Param name="ubitus.url" value="https://172.19.42.122/TrueMaxxGateway/cancelTrueMaxxRCVASOnTIBill" /-->
+		<!--Param name="ubitus.url" value="http://ip.jsontest.com" /-->
+		<Param name="tuc_act_ipdid_ws.url" value="http://172.19.194.96:18080/CIAWS/services/TUCVoiceIPDIDOrderActivityService" />
+		
+		
+		<!--## Validate Mibile ##-->
+		<Param name="sharebundleinfo.service.url" value="http://172.19.195.73:9510/ShareBundleServiceSIT" />
+		<!--#http://172.19.192.134:18080/vcare-gateway/services/validateMobileService ##-->
+		<!--# http://172.19.195.73:9510/ShareBundleServiceSIT ##-->
+		<Param name="migrate.webservice.url" value="http://172.19.216.115:8180/MigrationService/MigrationServiceSI" />
+		<Param name="migrate.webservice.username" value="ATP" />
+		<Param name="migrate.webservice.password" value="ATPOPER" /> 
+		<Param name="prepaid.webservice.url" value="http://172.19.216.115:8180/PrepaidServiceWS/PrepaidSubscriberService" />
+		<Param name="prepaid.webservice.username" value="tru13" />
+		<Param name="prepaid.webservice.password" value="Unix11" />
+		<Param name="servicedetail.webservice.url" value="http://172.19.9.183:8180/ServiceDetailWS/ServiceDetailSI" />
+		<Param name="servicedetail.webservice.username" value="CCC" />
+		<!-- TrueMaxx-->
+		<Param name="truemaxx.url" value="https://truemaxxgateway.dev.truelife.com/TrueMaxxGateway/cancelTrueMaxxRCVASOnTIBill" />
+
+		<!-- NetOmina -->
+		<Param name="netomina.service.url" value="http://10.4.109.228:80/CentinaWS/services/ServiceVCARE.ServiceVCAREHttpSoap12Endpoint" />
+	</Parameter>
+	
+	<ConnectionPool>
+		<DataSource name="ATPServiceDB"  jndi="jdbc/ATP" />
+		<DataSource name="ADSLWaitingList"  jndi="jdbc/ADSLWaitingList" />
+		<DataSource name="ResetPassword"  jndi="jdbc/DBResetPassword" />
+		<!--DataSource name="SiebleConnection"  jndi="jdbc/SIEBELDB" /-->
+		<DataSource name="SiebleConnection"  jndi="" class="oracle.jdbc.driver.OracleDriver" url="jdbc:oracle:thin:@150.4.2.33:1524:TAINT" user="intfadm" password="pys2lne"/>
+		<DataSource name="SiebelConnection"  jndi="" class="oracle.jdbc.driver.OracleDriver" url="jdbc:oracle:thin:@150.4.2.33:1524:TAINT" user="intfadm" password="pys2lne"/>
+		<DataSource name="VCareEdslConnection"  jndi="jdbc/VCAREEDSLDB" />
+		<DataSource name="VCareOnlineConnection" jndi="jdbc/VONLINEDB" />
+		<DataSource name="PosConnection" jndi="jdbc/POSDB" />
+		<DataSource name="ComDBConnection" jndi="jdbc/COM_DB" />
+		<DataSource name="COMManager.jndiName" jndi="jdbc/SIEBELDB" />
+		<DataSource name="COMManager.jndiName.amdoc" jndi="jdbc/AMDOCSDB" />
+		<DataSource name="TUCVoice" jndi="jdbc/SPGDB" />
+		<DataSource 
+			name="AmdocsOracleConnection"
+			class="oracle.jdbc.driver.OracleDriver" 
+			user="tatapp23" 
+			password="tatapp23" 
+			url="jdbc:oracle:thin:@172.20.192.23:1521:TEST01"
+		/>
+		<!-- Connection Sieble Database (taint02) -->
+		<DataSource 
+			name="Sieble02Connection"
+			class="oracle.jdbc.driver.OracleDriver" 
+			user="intfadm" 
+			password="intfadm" 
+			url="jdbc:oracle:thin:@172.20.192.21:1521:TAINT02"
+		/>
+		<DataSource 
+			name="modemUpdateInfo.datasouce"
+			class="oracle.jdbc.driver.OracleDriver" 
+			user="intfadm" 
+			password="pys2lne" 
+			url="jdbc:oracle:thin:@150.4.2.33:1524:TAINT"
+		/>
+		<DataSource 
+			name="loadDiscount.datasouce"
+			class="oracle.jdbc.driver.OracleDriver" 
+			user="intfadm" 
+			password="intfadm" 
+			url="jdbc:oracle:thin:@172.20.192.21:1521:TAINT04"
+		/>
+		<DataSource name="MetasolvConnection" jndi="" class="oracle.jdbc.driver.OracleDriver" url="jdbc:oracle:thin:@172.19.9.101:1575:MTSTST05" user="VCARE03" password="bring#1234567" />
+		<!--DataSource name="DSLConnection" jndi="" class="oracle.jdbc.driver.OracleDriver" url="jdbc:oracle:thin:@150.4.2.33:1524:TAINT" user="vcareorg" password="vcare" /-->
+		<DataSource name="DSLConnection" jndi="jdbc/SPGDB" />
+		<DataSource name="WEBOrderTransConnection" jndi="" class="oracle.jdbc.driver.OracleDriver" url="jdbc:oracle:thin:@150.4.2.33:1524:TAINT" user="vcwebowner" password="vcwebowner" /> 
+		<DataSource name="CutStockSapConnecttion" jndi="" class="oracle.jdbc.driver.OracleDriver" url="jdbc:oracle:thin:@150.4.2.33:1524:TAINT" user="vcareedsl" password="vcareedsl" />
+		<DataSource name="VCareQueueConnection" jndi="" class="oracle.jdbc.driver.OracleDriver" url="jdbc:oracle:thin:@150.4.2.33:1524:TAINT" user="vcareorg" password="vcare"/>
+		<DataSource name="SPGConnection" jndi="" class="oracle.jdbc.driver.OracleDriver" url="jdbc:oracle:thin:@150.4.2.33:1524:TAINT" user="vcareorg" password="vcare"/>
+		<DataSource name="IVRISCConnection" jndi="" class="oracle.jdbc.driver.OracleDriver" url="jdbc:oracle:thin:@172.19.8.123:1543:VCDBUAT2" user="intfadm" password="intfadm"/>
+		<DataSource name="AmdocConnection" jndi="" class="oracle.jdbc.driver.OracleDriver" url="jdbc:oracle:thin:@172.20.19.23:1521:TEST01" user="tatapp3" password="tatapp3" />
+	</ConnectionPool>
+
+	
+	<Listener>
+		
+		<Class name="org.apache.axis.transport.http.AxisHTTPSessionListener" />
+	
+		<!--<Class name="th.co.truecorp.vcare.siebel.bn.pullingtimer.PullingDataTimerContextListener" />-->
+	</Listener>
+
+</Configuration>

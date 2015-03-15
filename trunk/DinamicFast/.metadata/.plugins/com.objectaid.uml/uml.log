@@ -1,0 +1,4 @@
+2558-03-15 00:08:05.314 [Worker-0] INFO    com.objectaid.uml.license.LicenseManager initialize: ignoring invalid license
+2558-03-15 00:08:05.331 [Worker-0] INFO    com.objectaid.uml.license.LicenseManager initialize: ignoring invalid license
+2558-03-15 00:08:57.678 [Worker-4] INFO    com.objectaid.uml.model.manage.DiagramManager getFactories: com.objectaid.uml.diagramFactories[ucls]: com.objectaid.uml.cls.model.ClassDiagramFactory@1c7d672a
+2558-03-15 00:08:57.686 [Worker-4] INFO    com.objectaid.uml.model.manage.DiagramManager getFactories: com.objectaid.uml.diagramFactories[useq]: com.objectaid.uml.seq.model.SequenceDiagramFactory@ebaa6ba
