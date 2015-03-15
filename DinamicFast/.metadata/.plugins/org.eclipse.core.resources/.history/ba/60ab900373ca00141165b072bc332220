@@ -1,0 +1,5 @@
+package com.skcoe18.servlet;
+
+public interface AppConfigChangeListener {
+
+}

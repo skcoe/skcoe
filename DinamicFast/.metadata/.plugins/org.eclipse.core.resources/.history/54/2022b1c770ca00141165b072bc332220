@@ -1,0 +1,27 @@
+package com.skcoe18.servlet;
+
+import java.util.logging.Logger;
+
+import javax.servlet.ServletContext;
+
+public class ServletContextLogger extends Logger
+{
+  private ServletContext _sc = null;
+private String mLoggerName;
+
+  public ServletContextLogger(ServletContext sc)
+  {
+    this._sc = sc;
+    this.mLoggerName = this._sc.getServletContextName();
+  }
+
+  protected void log(int level, String message, Date created)
+  {
+    this._sc.log(message);
+  }
+
+  protected void init(Properties envs)
+    throws InstantiationException
+  {
+  }
+}

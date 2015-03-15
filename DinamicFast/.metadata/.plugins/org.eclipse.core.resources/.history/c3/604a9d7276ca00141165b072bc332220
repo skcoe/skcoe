@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Fast</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  	<context-param>
+		<param-name>ServiceContextPath</param-name>
+		<param-value>/services</param-value>
+	</context-param>
+				
+	<listener>
+			<listener-class>
+				com.skcoe18.servlet.ApplicationContextListener
+  			</listener-class>
+	</listener>
+
+	<listener>
+			<listener-class>
+				th.co.truecorp.vcare.httpgateway.ApplicationSessionListener
+  			</listener-class>
+	</listener>
+  <servlet>
+    <description></description>
+    <display-name>Core</display-name>
+    <servlet-name>Core</servlet-name>
+    <servlet-class>com.skcoe18.servlet.Core</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Core</servlet-name>
+    <url-pattern>/Core</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Test</display-name>
+    <servlet-name>Test</servlet-name>
+    <servlet-class>com.skcoe18.servlet.Test</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Test</servlet-name>
+    <url-pattern>/Test</url-pattern>
+  </servlet-mapping>
+  <context-param>
+    <param-name>name</param-name>
+    <param-value>John</param-value>
+  </context-param>
+  <context-param>
+    <param-name>password</param-name>
+    <param-value>password</param-value>
+  </context-param>
+</web-app>
