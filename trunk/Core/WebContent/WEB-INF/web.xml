@@ -1,0 +1,88 @@
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name>VCare Gateway Application</display-name>
+  <description>
+    	VCare Gateway Application 2.0.0
+    </description>
+  <context-param>
+    <param-name>jdbc.datasource</param-name>
+    <param-value>jdbc/COM_DB</param-value>
+  </context-param>
+  <context-param>
+    <param-name>jdbc.driver</param-name>
+    <param-value>oracle.jdbc.driver.OracleDriver</param-value>
+  </context-param>
+  <context-param>
+    <param-name>jdbc.url</param-name>
+    <param-value>jdbc:oracle:thin:@localhost:1521:XE</param-value>
+  </context-param>
+  <context-param>
+    <param-name>jdbc.user</param-name>
+    <param-value>vcarevg</param-value>
+  </context-param>
+  <context-param>
+    <param-name>jdbc.password</param-name>
+    <param-value>vcarevg</param-value>
+  </context-param>
+  <context-param>
+    <param-name>admin.user</param-name>
+    <param-value>admin</param-value>
+  </context-param>
+  <context-param>
+    <param-name>admin.password</param-name>
+    <param-value>vcare</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ServiceContextPath</param-name>
+    <param-value>/services</param-value>
+  </context-param>
+  <listener>
+    <listener-class>
+				th.co.truecorp.vcare.http.servlet.ApplicationContextListener
+  	</listener-class>
+  </listener>
+
+  <servlet>
+    <display-name>VCare Http Servlet Dispatcher</display-name>
+    <servlet-name>DispatcherHttpServlet</servlet-name>
+    <servlet-class>
+			th.co.truecorp.vcare.http.servlet.DispatcherHttpServlet
+		</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DispatcherHttpServlet</servlet-name>
+    <url-pattern>/services/*</url-pattern>
+  </servlet-mapping>
+ 	<welcome-file-list>
+		<welcome-file>\admin\index.jsp</welcome-file>
+	</welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Core</display-name>
+    <servlet-name>Core</servlet-name>
+    <servlet-class>th.co.truecorp.vcare.http.servlet.Core</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Core</servlet-name>
+    <url-pattern>/Core</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <description></description>
+    <display-name>AdminReloadHttpServlet</display-name>
+    <servlet-name>AdminReloadHttpServlet</servlet-name>
+    <servlet-class>th.co.truecorp.vcare.http.servlet.AdminReloadHttpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminReloadHttpServlet</servlet-name>
+    <url-pattern>/AdminReloadHttpServlet</url-pattern>
+  </servlet-mapping>
+   <context-param>
+    <param-name>ExternalLibraryPath</param-name>
+    <param-value>d:/ext-lib</param-value>
+  </context-param>
+   <context-param>
+    <param-name>ApplicationConfigFileName</param-name>
+    <param-value>d:/ext-lib\vcare-gateway-app-config.xml</param-value>
+  </context-param>
+</web-app>
