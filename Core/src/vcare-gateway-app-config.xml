@@ -1,0 +1,27 @@
+<Configuration>
+	
+	<ServletMapping>	
+		<Servlet path="CallCIAFreePhone" class="th.co.truecorp.vcare.cia.call.servlet.CallCIAFreephone" />
+		<Servlet path="upload" class="th.co.truecorp.vcare.http.servlet.services.Upload" />
+	</ServletMapping>
+	
+	<Logger defaultpath="D:\ext-lib\Log">
+		<Log name="CallCIAFreePhone" filename="CallCIAFreePhone" level="2" encoding="UTF-8" />
+	</Logger>
+
+	<Parameter>
+		<Param name="espg.url" value = "http://172.19.195.73:9510/SPGGateway2" />
+	<Param name="in.order.activity.service.url" value="http://172.19.194.96:18080/CIAWS/services/INOrderActivityService" />
+	</Parameter>
+	
+	<ConnectionPool>
+		<DataSource name="AmdocConnection" jndi="" class="oracle.jdbc.driver.OracleDriver" url="jdbc:oracle:thin:@172.20.19.23:1521:TEST01" user="tatapp3" password="tatapp3" />
+	</ConnectionPool>
+
+	
+	<Listener>
+		<Class name="org.apache.axis.transport.http.AxisHTTPSessionListener" />
+	
+	</Listener>
+
+</Configuration>
