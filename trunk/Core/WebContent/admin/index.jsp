@@ -10,8 +10,6 @@
 <title>Login</title>
 <%@ include file="../include/includeCss.jsp"%>
 <body>
-
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -40,118 +38,154 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>upload App</h1>
-        <p>ใช้ในการ deploy app</p>
-       
+        <h1>Application</h1>
       </div>
     </div>
 
-    <div class="container">
-      <!-- Example row of columns -->
-     <div class="row">
-     <div id="fileuploader">Upload</div>
+	<div class="container">
+		<!-- Example row of columns -->
+		<div class="row">
+			<div id="fileuploader">Upload</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Panel title Admin</h3>
+					</div>
+					<div class="panel-body">Panel content</div>
+				</div>
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Panel title</h3>
+					</div>
+					<div class="panel-body">Panel content</div>
+				</div>
 
-     
-     </div>
-      <div class="row">
-        <div class="col-md-6">
-          <h2>Heading</h2>
-          
-           
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        
-        </div>
-        <div class="col-md-6">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-       </div>
-       
-      </div>
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-success">
+					<div class="panel-heading">
+						<h3 class="panel-title">Panel title</h3>
+					</div>
+					<div class="panel-body">Panel content</div>
+				</div>
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3 class="panel-title">Panel title</h3>
+					</div>
+					<div class="panel-body">Panel content</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-warning">
+					<div class="panel-heading">
+						<h3 class="panel-title">Panel title</h3>
+					</div>
+					<div class="panel-body">Panel content</div>
+				</div>
+				<div class="panel panel-danger">
+					<div class="panel-heading">
+						<h3 class="panel-title">Panel title</h3>
+					</div>
+					<div class="panel-body">Panel content</div>
+				</div>
+			</div>
 
-      <hr>
+		</div>
+<nav>
+  <ul class="pager">
+    <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+    <li ><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+     <li>2</li>
+    <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+  </ul>
+  
+</nav>
+		<hr>
 
-      <footer>
-        <p>© Company 2014</p>
-      </footer>
-    </div> <!-- /container -->
+		<footer>
+		<p>© Company 2014</p>
+		</footer>
+	</div>
+	<!-- /container -->
 
 </body>
 <%@ include file="../include/includeJs.jsp"%>
     <script>
-$(document).ready(function()
+					$(document).ready(function()
 {
-$("#fileuploader").uploadFile({
-url: appCore.path+"/services/upload", // Server URL which handles File uploads
-method: "POST", // Upload Form method type POST or GET.
-enctype: "multipart/form-data", // Upload Form enctype.
-formData: null, // An object that should be send with file upload. data: { key1: 'value1', key2: 'value2' }
-returnType: null,
-allowedTypes: "*", // List of comma separated file extensions: Default is "*". Example: "jpg,png,gif"
-fileName: "file", // Name of the file input field. Default is file
-formData: {},
-dynamicFormData: function () { // To provide form data dynamically
-    return {};
-},
-maxFileSize: -1, // Allowed Maximum file Size in bytes.
-maxFileCount: -1, // Allowed Maximum number of files to be uploaded
-multiple: true, // If it is set to true, multiple file selection is allowed. 
-dragDrop: true, // Drag drop is enabled if it is set to true
-autoSubmit: true, // If it is set to true, files are uploaded automatically. Otherwise you need to call .startUpload function. Default istrue
-showCancel: true,
-showAbort: true,
-showDone: true,
-showDelete: false,
-showError: true,
-showStatusAfterSuccess: true,
-showStatusAfterError: true,
-showFileCounter: true,
-fileCounterStyle: "). ",
-showProgress: false,
-nestedForms: true,
-showDownload:false,
-onLoad:function(obj){},
-onSelect: function (files) {
-    return true;
-},
-onSubmit: function (files, xhr) {},
-onSuccess: function (files, response, xhr,pd) {},
-onError: function (files, status, message,pd) {},
-onCancel: function(files,pd) {},
-downloadCallback:false,
-deleteCallback: false,
-afterUploadAll: false,
-uploadButtonClass: "ajax-file-upload",
-dragDropStr: "<span><b>Drag &amp; Drop Files</b></span>",
-abortStr: "Abort",
-cancelStr: "Cancel",
-deletelStr: "Delete",
-doneStr: "Done",
-multiDragErrorStr: "Multiple File Drag &amp; Drop is not allowed.",
-extErrorStr: "is not allowed. Allowed extensions: ",
-sizeErrorStr: "is not allowed. Allowed Max size: ",
-uploadErrorStr: "Upload is not allowed",
-maxFileCountErrorStr: " is not allowed. Maximum allowed files are:",
-downloadStr:"Download",
-showQueueDiv:false,
-statusBarWidth:500,
-dragdropWidth:500
-});
-});
-</script>
+$("#fileuploader").uploadFile({															url : appCore.path
+																	+ "/services/upload", // Server URL which handles File uploads
+															method : "POST", // Upload Form method type POST or GET.
+															enctype : "multipart/form-data", // Upload Form enctype.
+															formData : null, // An object that should be send with file upload. data: { key1: 'value1', key2: 'value2' }
+															returnType : null,
+															allowedTypes : "*", // List of comma separated file extensions: Default is "*". Example: "jpg,png,gif"
+															fileName : "file", // Name of the file input field. Default is file
+															formData : {},
+															dynamicFormData : function() { // To provide form data dynamically
+																return {};
+															},
+															maxFileSize : -1, // Allowed Maximum file Size in bytes.
+															maxFileCount : -1, // Allowed Maximum number of files to be uploaded
+															multiple : true, // If it is set to true, multiple file selection is allowed. 
+															dragDrop : true, // Drag drop is enabled if it is set to true
+															autoSubmit : true, // If it is set to true, files are uploaded automatically. Otherwise you need to call .startUpload function. Default istrue
+															showCancel : true,
+															showAbort : true,
+															showDone : true,
+															showDelete : false,
+															showError : true,
+															showStatusAfterSuccess : true,
+															showStatusAfterError : true,
+															showFileCounter : true,
+															fileCounterStyle : "). ",
+															showProgress : false,
+															nestedForms : true,
+															showDownload : false,
+															onLoad : function(
+																	obj) {
+															},
+															onSelect : function(
+																	files) {
+																return true;
+															},
+															onSubmit : function(
+																	files, xhr) {
+															},
+															onSuccess : function(
+																	files,
+																	response,
+																	xhr, pd) {
+															},
+															onError : function(
+																	files,
+																	status,
+																	message, pd) {
+															},
+															onCancel : function(
+																	files, pd) {
+															},
+															downloadCallback : false,
+															deleteCallback : false,
+															afterUploadAll : false,
+															uploadButtonClass : "ajax-file-upload",
+															dragDropStr : "<span><b>Drag &amp; Drop Files</b></span>",
+															abortStr : "Abort",
+															cancelStr : "Cancel",
+															deletelStr : "Delete",
+															doneStr : "Done",
+															multiDragErrorStr : "Multiple File Drag &amp; Drop is not allowed.",
+															extErrorStr : "is not allowed. Allowed extensions: ",
+															sizeErrorStr : "is not allowed. Allowed Max size: ",
+															uploadErrorStr : "Upload is not allowed",
+															maxFileCountErrorStr : " is not allowed. Maximum allowed files are:",
+															downloadStr : "Download",
+															showQueueDiv : false,
+															statusBarWidth : 500,
+															dragdropWidth : 500
+														});
+									});
+				</script>
 </html>
