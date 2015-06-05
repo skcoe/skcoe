@@ -42,16 +42,14 @@
       </div>
     </div>
 
-	<div class="container">
+	<div class="container" id='containerAppType'>
 		<!-- Example row of columns -->
-		<div class="row">
-			<div id="fileuploader">Upload</div>
-		</div>
+		
 		<div class="row">
 			<div class="col-md-4">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h3 class="panel-title">Panel title Admin</h3>
+						<h3 class="panel-title"><button id='test' type="button" class="btn btn-default"><span class="glyphicon  glyphicon-link" aria-hidden="true"></span></button>  Panel title Admin </h3>
 					</div>
 					<div class="panel-body">Panel content</div>
 				</div>
@@ -91,7 +89,6 @@
 					<div class="panel-body">Panel content</div>
 				</div>
 			</div>
-
 		</div>
 <nav>
   <ul class="pager">
@@ -115,77 +112,46 @@
     <script>
 					$(document).ready(function()
 {
-$("#fileuploader").uploadFile({															url : appCore.path
-																	+ "/services/upload", // Server URL which handles File uploads
-															method : "POST", // Upload Form method type POST or GET.
-															enctype : "multipart/form-data", // Upload Form enctype.
-															formData : null, // An object that should be send with file upload. data: { key1: 'value1', key2: 'value2' }
-															returnType : null,
-															allowedTypes : "*", // List of comma separated file extensions: Default is "*". Example: "jpg,png,gif"
-															fileName : "file", // Name of the file input field. Default is file
-															formData : {},
-															dynamicFormData : function() { // To provide form data dynamically
-																return {};
-															},
-															maxFileSize : -1, // Allowed Maximum file Size in bytes.
-															maxFileCount : -1, // Allowed Maximum number of files to be uploaded
-															multiple : true, // If it is set to true, multiple file selection is allowed. 
-															dragDrop : true, // Drag drop is enabled if it is set to true
-															autoSubmit : true, // If it is set to true, files are uploaded automatically. Otherwise you need to call .startUpload function. Default istrue
-															showCancel : true,
-															showAbort : true,
-															showDone : true,
-															showDelete : false,
-															showError : true,
-															showStatusAfterSuccess : true,
-															showStatusAfterError : true,
-															showFileCounter : true,
-															fileCounterStyle : "). ",
-															showProgress : false,
-															nestedForms : true,
-															showDownload : false,
-															onLoad : function(
-																	obj) {
-															},
-															onSelect : function(
-																	files) {
-																return true;
-															},
-															onSubmit : function(
-																	files, xhr) {
-															},
-															onSuccess : function(
-																	files,
-																	response,
-																	xhr, pd) {
-															},
-															onError : function(
-																	files,
-																	status,
-																	message, pd) {
-															},
-															onCancel : function(
-																	files, pd) {
-															},
-															downloadCallback : false,
-															deleteCallback : false,
-															afterUploadAll : false,
-															uploadButtonClass : "ajax-file-upload",
-															dragDropStr : "<span><b>Drag &amp; Drop Files</b></span>",
-															abortStr : "Abort",
-															cancelStr : "Cancel",
-															deletelStr : "Delete",
-															doneStr : "Done",
-															multiDragErrorStr : "Multiple File Drag &amp; Drop is not allowed.",
-															extErrorStr : "is not allowed. Allowed extensions: ",
-															sizeErrorStr : "is not allowed. Allowed Max size: ",
-															uploadErrorStr : "Upload is not allowed",
-															maxFileCountErrorStr : " is not allowed. Maximum allowed files are:",
-															downloadStr : "Download",
-															showQueueDiv : false,
-															statusBarWidth : 500,
-															dragdropWidth : 500
-														});
-									});
+						var $test = $( "#test" );
+						 
+						function handler1() {
+						  console.log( "handler1:"+appCore.path );
+						 /*  $.ajax({
+							  method: "POST",
+							  url: appCore.path+"/Core",
+							  dataType: "script",
+							  success:function(  data,  textStatus,  jqXHR ){
+								  appCore.xxx=data;
+								  console.log( data ); // Data returned
+								  console.log( textStatus ); // Success
+								  console.log( jqxhr.status ); // 200
+								  console.log( "Load was performed." );
+								  
+								  x();
+							  },
+							  error:function(jqXHR,  textStatus,  errorThrown ){
+								  console.log( textStatus ); // Data returned
+								  console.log( errorThrown ); // Success
+								  console.log( jqXHR.status ); // 200
+							  }
+							}); */
+							 $.getScript(appCore.path+"/Core", function(e) {
+								 loadJS();
+								 appCore.x();
+								 
+							});
+								
+						}
+						 
+						
+						 
+						$test.on( "click", handler1 );
+});
+									
+								/* 	$.ajax({
+										  method: "GET",
+										  url: appCore.path,
+										  dataType: "script"
+										}); */
 				</script>
 </html>
