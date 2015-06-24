@@ -22,6 +22,7 @@ import java.net.URLEncoder;
 import java.security.Permission;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import javax.sound.midi.InvalidMidiDataException;
 import javax.sound.midi.MidiSystem;
@@ -49,14 +50,15 @@ public class HttpURLConnectionExample {
 		for (int i = 2; i > 1; i++) {
 			Date d =new Date();
 			boolean check1=false;
-			SimpleDateFormat dt = new SimpleDateFormat("yyyyy-mm-dd hh:mm:ss"); 
+			SimpleDateFormat dt = new SimpleDateFormat("yyyyy-mm-dd hh:mm:ss",Locale.US); 
 			String x =getUrlContents(Url);//excutePost(Url, pa);
-			System.out.println("date :"+dt.format(d) +" =>"+x);
+			//System.out.println("date :"+dt.format(d) +" =>"+x);
 			if(x!=null){
 				JSONObject jx = new JSONObject(x);
 				JSONObject data=jx.getJSONArray("data").getJSONObject(0);
-				System.out.println(data.getString("sell_price")+"  "+data.getString("normal_price")+" "+ data.getString("special_price")+" "+data.getString("product_name_th")  );
-				check1="1".equals(data.getString("sell_price"));	
+				System.out.println(dt.format(d) +" > "+data.getString("sell_price")+"  "+data.getString("normal_price")+" "+ data.getString("special_price")+" "+data.getString("product_name_th")  );
+				check1=("1".equals(data.getString("sell_price"))||"1".equals(data.getString("special_price")));
+				//check1=true;
 			}else {
 				System.out.println("Error Call");
 				i=0;

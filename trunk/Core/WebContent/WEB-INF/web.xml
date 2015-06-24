@@ -83,6 +83,6 @@
   </context-param>
    <context-param>
     <param-name>ApplicationConfigFileName</param-name>
-    <param-value>d:/ext-lib\vcare-gateway-app-config.xml</param-value>
+    <param-value>D:/ext-lib/vcare-gateway-app-config.xml</param-value>
   </context-param>
 </web-app>
