@@ -1,4 +1,4 @@
-<%-- <%@ page import="th.co.truecorp.vcare.configauth.servlet.bean.SessionUser" %> --%>
+
 <%
 /* SessionUser user=(SessionUser)session.getAttribute("Login");
 String display=(String)session.getAttribute("display"); */

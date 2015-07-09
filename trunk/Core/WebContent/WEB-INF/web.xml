@@ -38,7 +38,7 @@
   </context-param>
   <listener>
     <listener-class>
-				th.co.truecorp.vcare.http.servlet.ApplicationContextListener
+				com.skcoe18.core.http.servlet.ApplicationContextListener
   	</listener-class>
   </listener>
 
@@ -46,7 +46,7 @@
     <display-name>VCare Http Servlet Dispatcher</display-name>
     <servlet-name>DispatcherHttpServlet</servlet-name>
     <servlet-class>
-			th.co.truecorp.vcare.http.servlet.DispatcherHttpServlet
+			com.skcoe18.core.http.servlet.DispatcherHttpServlet
 		</servlet-class>
   </servlet>
   <servlet-mapping>
@@ -60,7 +60,7 @@
     <description></description>
     <display-name>Core</display-name>
     <servlet-name>Core</servlet-name>
-    <servlet-class>th.co.truecorp.vcare.http.servlet.Core</servlet-class>
+    <servlet-class>com.skcoe18.core.http.servlet.Core</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Core</servlet-name>
@@ -71,7 +71,7 @@
     <description></description>
     <display-name>AdminReloadHttpServlet</display-name>
     <servlet-name>AdminReloadHttpServlet</servlet-name>
-    <servlet-class>th.co.truecorp.vcare.http.servlet.AdminReloadHttpServlet</servlet-class>
+    <servlet-class>com.skcoe18.core.http.servlet.AdminReloadHttpServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AdminReloadHttpServlet</servlet-name>
@@ -83,6 +83,6 @@
   </context-param>
    <context-param>
     <param-name>ApplicationConfigFileName</param-name>
-    <param-value>D:/ext-lib/vcare-gateway-app-config.xml</param-value>
+    <param-value>vcare-gateway-app-config.xml</param-value>
   </context-param>
 </web-app>
