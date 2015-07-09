@@ -1,8 +1,8 @@
 <Configuration>
 	
 	<ServletMapping>	
-		<Servlet path="CallCIAFreePhone" class="th.co.truecorp.vcare.cia.call.servlet.CallCIAFreephone" />
-		<Servlet path="upload" class="th.co.truecorp.vcare.http.servlet.services.Upload" />
+		<Servlet path="CallCIAFreePhone" class="com.skcoe18.core.cia.call.servlet.CallCIAFreephone" />
+		<Servlet path="upload" class="com.skcoe18.core.http.servlet.services.Upload" />
 	</ServletMapping>
 	
 	<Logger defaultpath="D:\ext-lib\Log">
